@@ -12,4 +12,4 @@ Before opening a pull request:
 2. Explain the user-facing benefit and the evidence for the change.
 3. Identify any remaining runtime or visual verification limits.
 
-If you change the native preview, regenerate and inspect its light/dark captures on macOS. These are deliberately static fixtures, not a complete utility app. Do not add live data or network access to them.
+If you change the visual examples, inspect both appearances and keep their provenance accurate. Generated mockups must be labeled as such; only call an image a macOS 27 screenshot if it was actually captured on that OS. Follow `docs/VISUALS.md` and current Apple references. Do not recreate legacy system styling just because an older runtime is available.

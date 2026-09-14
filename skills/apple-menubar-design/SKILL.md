@@ -32,6 +32,8 @@ Apple prefers a menu for an extra unless the exposed functionality is too comple
 
 ## Design and build
 
+For a requested OS generation or “latest macOS” design, verify that generation's current Apple visual references before producing artwork. Match the requested generation rather than the host machine's appearance. Keep mockups explicitly separate from native screenshots; an older-OS capture does not demonstrate a newer interface. For macOS 27, read the version note in [Native interface design](references/interface.md).
+
 Use standard controls and semantic system styles first. Introduce customization where it improves recognition or a specific task; preserve keyboard behavior, focus, accessibility, and resizing. Keep content hierarchy independent of decorative effects. Never claim that hardcoded spacing, a color palette, card count, or window dimension is an Apple requirement without a supporting source.
 
 Specify the important states alongside the happy path. For a utility this commonly means loading, ready, empty, stale, unavailable, and recoverable failure. Include only states the feature can actually encounter. Use realistic long labels and data extremes early. Keep primary actions and the meaning of values readable before adding secondary detail.

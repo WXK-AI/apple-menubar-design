@@ -31,3 +31,11 @@ Name actions by their outcome. Explain a failure with its consequence and availa
 Use semantic controls with meaningful names, values, state, and actions. Check VoiceOver reading order and keyboard access to child controls; do not flatten a container into one accessibility element if that hides actionable descendants. Preserve visible focus, text selection, and familiar text-editing shortcuts.
 
 Provide an alternative to hover-only details, color-only chart categories, and motion-only feedback. Test contrast on rendered materials, appearance variants, and accessibility settings. Inspect focus and activation separately from how the UI looks. Avoid treating iOS touch-target or Dynamic Type conventions as guaranteed macOS behavior. [HIG: Accessibility](https://developer.apple.com/design/human-interface-guidelines/accessibility)
+
+## macOS 27 visual baseline
+
+Apple's macOS 27 overview and WWDC26 material describe stronger legibility, refined glass edges, coordinated toolbars, edge-to-edge sidebars, and accent-colored sidebar icons. Use those current references when targeting 27; do not reproduce older inset-sidebar or legacy control styling simply because the development host renders it. Keep the native content layer clear and use system components to obtain the actual behavior.
+
+For visual work, compare against Apple's current examples before rendering. For implementation, record the SDK and runtime separately and test on the requested OS. An AI-generated mockup may communicate intent but cannot verify exact system geometry, refraction, focus behavior, or accessibility. Respect the user's contrast, transparency, and border preferences; do not bake one glass appearance into custom controls.
+
+Sources: [macOS 27 overview](https://www.apple.com/os/macos/), [WWDC26 Platforms State of the Union](https://developer.apple.com/videos/play/wwdc2026/102/), [Apple Design Resources](https://developer.apple.com/design/resources/). Checked 2026-09-15.

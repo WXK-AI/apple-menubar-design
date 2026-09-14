@@ -35,7 +35,7 @@ def main():
             if link.startswith(('http://', 'https://', '#', 'mailto:')):
                 continue
             check((path.parent / link.split('#')[0]).is_file(), f'Broken link in {path}: {link}')
-    for name in ['cover.svg', 'window-light.png', 'window-dark.png', 'quick-access-light.png', 'quick-access-dark.png']:
+    for name in ['macos27-light.png', 'macos27-dark.png']:
         path = ROOT / 'docs/images' / name
         data = path.read_bytes()
         if name.endswith('.svg'):

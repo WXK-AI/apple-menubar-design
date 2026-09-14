@@ -1,6 +1,9 @@
-<p align="center">
-  <img src="docs/images/cover.svg" alt="Apple Menu Bar Design — Native behavior. Considered interfaces." width="100%">
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/macos27-dark.png">
+  <img src="docs/images/macos27-light.png" alt="macOS 27-inspired design mockup: Quiet Sync companion window and menu bar extra with refined Liquid Glass" width="100%">
+</picture>
+
+<p align="center"><sub>macOS 27 design study · AI-generated mockup · Fictional data</sub></p>
 
 <p align="center">
   <a href="https://github.com/WXK-AI/apple-menubar-design/actions/workflows/validate.yml"><img src="https://github.com/WXK-AI/apple-menubar-design/actions/workflows/validate.yml/badge.svg" alt="Validate skill"></a>
@@ -11,7 +14,7 @@
 
 # Apple Menu Bar Design
 
-**A focused Codex skill for designing, implementing, and reviewing native macOS interfaces.**
+**A focused Codex skill for designing, implementing, and reviewing native macOS interfaces—with a macOS 27 visual baseline.**
 
 Turn a product brief into thoughtful menu bar behavior, useful companion windows, clear Settings, and accessible interactions. The skill combines Apple’s Human Interface Guidelines with practical SwiftUI/AppKit considerations—and keeps recommendations separate from API requirements.
 
@@ -84,35 +87,19 @@ that needs runtime testing, and cite relevant Apple guidance.
 
 ## Interface preview
 
-These screenshots capture **native AppKit documentation fixtures** on macOS, using fictional “Quiet Sync” data. They illustrate readable hierarchy and light/dark appearance; they are not a shipped application, an interactive demo, or a guarantee of the skill's output. The fixture controls are intentionally inert.
+The current visual direction follows Apple's **macOS 27** references: refined Liquid Glass, clearer optical edges, unified toolbars, and sidebars that reach the window edges. Glass defines the navigation and controls; the content remains calm and readable.
 
-### A companion window in two appearances
+### Light appearance
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/window-dark.png">
-  <img src="docs/images/window-light.png" alt="Native light appearance example: a sidebar, readable sync status, three folder rows, and contextual actions" width="100%">
-</picture>
+![macOS 27 light appearance design study with a blue and platinum desktop, translucent navigation, opaque content, and an anchored menu bar extra](docs/images/macos27-light.png)
 
-[View light appearance](docs/images/window-light.png) · [View dark appearance](docs/images/window-dark.png)
+### Dark appearance
 
-<details>
-<summary>Compare compact quick-access fixtures</summary>
+![macOS 27 dark appearance design study with smoky glass navigation, charcoal content, high-contrast text, and a compact menu bar extra](docs/images/macos27-dark.png)
 
-| Light | Dark |
-| --- | --- |
-| ![Light quick-access fixture](docs/images/quick-access-light.png) | ![Dark quick-access fixture](docs/images/quick-access-dark.png) |
+These are **AI-generated design mockups**, not screenshots captured on macOS 27 or a working app. They visualize a fictional Quiet Sync utility and do not establish exact system geometry or runtime behavior. For a few simple commands, a native menu remains the starting choice; a richer extra needs a task-based justification.
 
-These captures use titled windows to make the example content easy to inspect. They do not demonstrate a real menu bar extra's placement or dismissal. For a utility with only these few commands, a native menu is the starting choice; richer controls must justify a window-style extra.
-
-</details>
-
-Reproduce the captures on macOS with Xcode Command Line Tools installed:
-
-```sh
-swift examples/native-preview/Preview.swift docs/images
-```
-
-The script briefly opens only its fictional example windows, captures their native view hierarchies, then closes them. It does not capture your desktop, access accounts, or perform file synchronization. Rendering follows the installed macOS version and display scale.
+Read the [visual direction and generation notes](docs/VISUALS.md) for the Apple references, appearance decisions, and production method. Native implementation should use the target SDK and be checked on macOS 27, including its contrast and transparency settings.
 
 ## Inside the skill
 

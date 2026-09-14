@@ -32,3 +32,9 @@ An API example is:
 `https://developer.apple.com/tutorials/data/documentation/swiftui/menubarextra.json`
 
 These retrieval paths are an observed mechanism, not a promised stable API. Read `primaryContentSections`, resolve referenced titles where needed, and inspect `metadata.platforms` for symbol availability. Cite the human-readable canonical page. A successful HTTP response alone does not verify that a page contains the claimed guidance. If the mechanism changes, use Apple's site search; do not substitute an unverified third-party summary.
+
+## macOS 27 references
+
+- [macOS 27 overview](https://www.apple.com/os/macos/): current design refinements and visual examples.
+- [WWDC26 Platforms State of the Union](https://developer.apple.com/videos/play/wwdc2026/102/): revised glass edges, sidebar behavior, and accessibility settings.
+- [Apple Design Resources](https://developer.apple.com/design/resources/) and [What's new in design](https://developer.apple.com/design/whats-new/): current macOS design kits. Verify the kit's version before using it.
