@@ -1,0 +1,22 @@
+name: Guidance correction
+description: Report an inaccurate recommendation or reproducible technical issue.
+title: "[Correction] "
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: What needs correcting?
+      description: Identify the skill section and explain the user impact.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link Apple documentation or include a minimal reproduction with macOS and SDK versions.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Suggested correction
